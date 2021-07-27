@@ -16,11 +16,21 @@ def multiply(n1, n2):
 def divide(n1, n2):
     return n1/n2
 
+#exponent
+def exponent(n1, n2):
+    return n1 ** n2
+
+#modulus
+def modulus(n1, n2):
+    return n1%n2
+
 operations = {
     "+" : add,
     "-" : subtract,
     "*" : multiply,
-    "/" : divide
+    "/" : divide,
+    "e" : exponent,
+    "%" : modulus
 }
 
 def calculator():
@@ -34,7 +44,7 @@ def calculator():
     while continuar :
         operation_symbol = input("Pick an operation: ")
         num2 = float(input("Wha's the second number?: "))
-        calculation_function = operations[operation_symbol] #
+        calculation_function = operations[operation_symbol] 
         #con esto asignamos el nombre de la función, donde como tal sera reemplazada
         #por el nombre de la función y solo necesita los argumentos para ser llamada
         #llamar_funcion = subtract
